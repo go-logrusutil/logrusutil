@@ -28,6 +28,7 @@ func main() {
 	mux := http.NewServeMux()
 	registerHello(mux)
 	registerTry(mux)
+	registerGo(mux)
 	// create a server with structred contextual logging middleware
 	server := http.Server{
 		Addr:    ":8080",

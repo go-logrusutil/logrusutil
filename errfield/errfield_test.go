@@ -9,7 +9,7 @@ import (
 	"github.com/go-logrusutil/logrusutil/errfield"
 )
 
-func Example_basic() {
+func Example() {
 	log.SetOutput(os.Stdout)
 
 	// setup the errfield.Formatter
