@@ -2,7 +2,7 @@
 
 | file | description |
 | ---- | ----------- |
-| [**main.go**](main.go) | bootstraps HTTP server under **<http://localhost:8080>** with contextual request logging and error fields |
+| [**main.go**](main.go) | bootstraps HTTP server under **<http://localhost:8080>** with contextual request and error fields logging |
 | [**middleware.go**](middleware.go) | defines contextual request logging HTTP middleware function |
 | [**hello.go**](hello.go) | implements naive `/hello` endpoint which emits a contextual log |
 | [**try.go**](try.go) | implements `/try` endpoint that most likely fails and logs error with a field |
