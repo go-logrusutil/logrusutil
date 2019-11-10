@@ -9,3 +9,7 @@ Add a log entry to the context using `logctx.New(ctx, logEntry)`. Retrieve the l
 ## `errfield` package [![GoDoc](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield?status.svg)](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield)
 
 Wrap an error with fields using `errfield.Add(err, "key", value)`. Use `errfield.Formatter` to log the fields in a structured way.
+
+## [Examples](example)
+
+See example usage in a [**sample HTTP server application**](example).
