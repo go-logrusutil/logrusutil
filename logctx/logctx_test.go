@@ -8,9 +8,9 @@ import (
 	"os"
 	"sync/atomic"
 
-	"github.com/go-logrusutil/logrusutil/logctx"
-
 	log "github.com/sirupsen/logrus"
+
+	"github.com/go-logrusutil/logrusutil/logctx"
 )
 
 func Example_basic() {
@@ -46,8 +46,7 @@ func Example_hTTPRequestID() {
 
 	// handler retrieving request contextual log entry, adding some data and emitting the log
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		ctx := r.Context()
-		logctx.From(ctx).WithField("foo", "bar").Info("foobar created")
+		logctx.From(r.Context()).WithField("foo", "bar").Info("foobar created")
 	})
 
 	// run HTTP server with logging middleware

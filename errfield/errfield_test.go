@@ -4,9 +4,9 @@ import (
 	"errors"
 	"os"
 
-	"github.com/go-logrusutil/logrusutil/errfield"
-
 	log "github.com/sirupsen/logrus"
+
+	"github.com/go-logrusutil/logrusutil/errfield"
 )
 
 func Example_basic() {
