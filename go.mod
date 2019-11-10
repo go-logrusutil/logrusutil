@@ -1,4 +1,4 @@
-module github.com/logrusutil/v1
+module github.com/go-logrusutil/logrusutil
 
 go 1.13
 

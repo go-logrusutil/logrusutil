@@ -8,7 +8,7 @@ import (
 	"os"
 	"sync/atomic"
 
-	"github.com/logrusutil/v1/logctx"
+	"github.com/go-logrusutil/logrusutil/logctx"
 
 	log "github.com/sirupsen/logrus"
 )
