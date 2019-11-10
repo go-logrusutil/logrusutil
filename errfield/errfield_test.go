@@ -4,7 +4,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/logrusutil/v1/errfield"
+	"github.com/go-logrusutil/logrusutil/errfield"
 
 	log "github.com/sirupsen/logrus"
 )
