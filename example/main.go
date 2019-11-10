@@ -33,5 +33,9 @@ func main() {
 		Addr:    ":8080",
 		Handler: logMiddleware(mux),
 	}
-	server.ListenAndServe()
+	err := server.ListenAndServe()
+	if err != http.ErrServerClosed {
+		logctx.DefaultLogEntry.WithError(err).Fatal("server unexpectedly closed")
+	}
+	logctx.DefaultLogEntry.Info("server closed")
 }
