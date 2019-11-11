@@ -23,6 +23,7 @@ func main() {
 	// set logctx.DefaultLogEntry and use it in places when there is no context
 	logctx.DefaultLogEntry = log.WithField("app", "example")
 	logctx.DefaultLogEntry.Info("server starting")
+	// Output: time="2019-11-11T20:45:01.3777602+01:00" level=info msg="server starting" app=example
 
 	// bootstrap HTTP server
 	mux := http.NewServeMux()

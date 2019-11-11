@@ -14,10 +14,12 @@ func registerTry(mux *http.ServeMux) {
 		if err := try(); err != nil {
 			// log error with contextual data
 			logctx.From(r.Context()).WithError(err).Error("try failed")
+			// Output: time="2019-11-11T20:49:50.7667768+01:00" level=error msg="try failed" app=example error="failed to generate an excelent point" point="{2 1}" reqID=3916589616287113937
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
 		logctx.From(r.Context()).Info("try succeded")
+		// Output: time="2019-11-11T20:48:27.2073124+01:00" level=info msg="try succeded" app=example reqID=8674665223082153551
 	})
 }
 
