@@ -16,12 +16,12 @@
 1. Open **<http://localhost:8080/hello>** in a browser.
 1. Look at the application logs. Notice that all logs emitted from a given request have the same `request_id` field value.
 1. Read [**hello.go**](hello.go) to see how to make contextual logs.
-1. Open **<http://localhost:8080/try>** in a browser.
+1. Open **<http://localhost:8080/try>** in a browser **at least 2 times**.
 1. Look at the application logs. Notice that the error log has an additional `point` field.
 1. Read [**hello.go**](hello.go) to see how to wrap error with fields.
 1. Read [**main.go**](main.go) and [**middleware.go**](middleware.go) to see how to setup contextual logging and error fields logging.
 1. Open **<http://localhost:8080/go>** in a browser.
-1. Look at the application logs. Notice the `ctxID` and `prevCtxID` log fields.
+1. Look at the application logs. Notice the `jobID` and `parentJobID` log fields.
 1. Read [**goroutine.go**](goroutine.go) to see how contextual logging can be used to trace goroutines.
 
-**Tip:** Consider debugging the application to have deeper understanding.
+**Tip:** Consider debugging the application for deeper understanding.
