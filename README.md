@@ -12,4 +12,4 @@ Wrap an error with fields using `errfield.Add(err, "key", value)`. Use `errfield
 
 ## [Examples](example)
 
-See example usage in a [**sample HTTP server application**](example).
+Check the [**sample HTTP server application**](example) and its [**Step by step guide**](example/README.md#step-by-step-guide), to see **logrusutil** in action.
