@@ -18,7 +18,7 @@
 1. Read [**hello.go**](hello.go) to see how to make contextual logs.
 1. Open **<http://localhost:8080/try>** in a browser **at least 2 times**.
 1. Look at the application logs. Notice that the error log has an additional `point` field.
-1. Read [**hello.go**](hello.go) to see how to wrap error with fields.
+1. Read [**try.go**](try.go) to see how to wrap error with fields.
 1. Read [**main.go**](main.go) and [**middleware.go**](middleware.go) to see how to setup contextual logging and error fields logging.
 1. Open **<http://localhost:8080/go>** in a browser.
 1. Look at the application logs. Notice the `jobID` and `parentJobID` log fields.
