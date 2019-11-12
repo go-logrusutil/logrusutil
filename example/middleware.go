@@ -11,7 +11,7 @@ func logMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// add a random reqID field for each request
 		reqID := rand.Int()
-		logEntry := logctx.DefaultLogEntry.WithField("reqID", reqID)
+		logEntry := logctx.Default.WithField("reqID", reqID)
 		logEntry.Info("request started")
 		// Output: time="2019-11-11T20:47:29.5326335+01:00" level=info msg="request started" app=example reqID=5577006791947779410
 

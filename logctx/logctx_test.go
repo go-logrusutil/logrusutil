@@ -21,16 +21,16 @@ func Example() {
 	// Output: level=info msg="hello world" foo=bar
 }
 
-// IMPORTANT: this test is a the end because it alters global DefaultLogEntry,
+// IMPORTANT: this test is a the end because it alters global Default,
 // yet I want to have the example as simple as possible
 
 //
-func Example_defaultLogEntry() {
+func Example_default() {
 	log.SetOutput(os.Stdout)
 	log.SetFormatter(&log.TextFormatter{DisableTimestamp: true})
 
 	// set the default log entry
-	logctx.DefaultLogEntry = log.WithField("foo", "bar")
+	logctx.Default = log.WithField("foo", "bar")
 
 	// get a log entry from context for which a contextual entry was not set
 	logctx.From(context.Background()).Info("hello world")

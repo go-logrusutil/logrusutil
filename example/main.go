@@ -20,9 +20,9 @@ func main() {
 			TimestampFormat: time.RFC3339Nano,
 		},
 	})
-	// set logctx.DefaultLogEntry and use it in places when there is no context
-	logctx.DefaultLogEntry = log.WithField("app", "example")
-	logctx.DefaultLogEntry.Info("server starting")
+	// set logctx.Default and use it in places when there is no context
+	logctx.Default = log.WithField("app", "example")
+	logctx.Default.Info("server starting")
 	// Output: time="2019-11-11T20:45:01.3777602+01:00" level=info msg="server starting" app=example
 
 	// bootstrap HTTP server
@@ -37,7 +37,7 @@ func main() {
 	}
 	err := server.ListenAndServe()
 	if err != http.ErrServerClosed {
-		logctx.DefaultLogEntry.WithError(err).Fatal("server unexpectedly closed")
+		logctx.Default.WithError(err).Fatal("server unexpectedly closed")
 	}
-	logctx.DefaultLogEntry.Info("server closed")
+	logctx.Default.Info("server closed")
 }
