@@ -6,9 +6,13 @@ Small, easy to use, yet powerful utility packages for [**logrus**](https://githu
 
 Add a log entry to the context using `logctx.New(ctx, logEntry)` or simply add a new log field using `logctx.AddField(ctx, key, value)`. Retrieve the log entry using `logctx.From(ctx)`.
 
+[Read more.](https://pajak.home.blog/2019/12/12/logging-6-correlation-log-field/)
+
 ## `errfield` package [![GoDoc](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield?status.svg)](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield)
 
 Wrap an error with fields using `errfield.Add(err, "key", value)`. Use `errfield.Formatter` to log the fields in a structured way.
+
+[Read more.](https://pajak.home.blog/2019/12/15/logging-7-contextual-error-data-log-field/)
 
 ## [Examples](example)
 
