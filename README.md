@@ -4,7 +4,7 @@ Small, easy to use, yet powerful utility packages for [**logrus**](https://githu
 
 ## `logctx` package [![GoDoc](https://godoc.org/github.com/go-logrusutil/logrusutil/logctx?status.svg)](https://godoc.org/github.com/go-logrusutil/logrusutil/logctx)
 
-Add a log entry to the context using `logctx.New(ctx, logEntry)`. Retrieve the log entry using `logctx.From(ctx)`.
+Add a log entry to the context using `logctx.New(ctx, logEntry)` or simply add a new log field using `logctx.AddField(ctx, key, value)`. Retrieve the log entry using `logctx.From(ctx)`.
 
 ## `errfield` package [![GoDoc](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield?status.svg)](https://godoc.org/github.com/go-logrusutil/logrusutil/errfield)
 

@@ -25,3 +25,9 @@ func From(ctx context.Context) *logrus.Entry {
 	}
 	return Default
 }
+
+// AddField adds a log field to the contexual log entry.
+func AddField(ctx context.Context, key string, value interface{}) context.Context {
+	entry := From(ctx).WithField(key, value)
+	return New(ctx, entry)
+}

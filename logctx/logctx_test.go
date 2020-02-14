@@ -16,9 +16,12 @@ func Example() {
 	// setting contextual log entry
 	ctx := logctx.New(context.Background(), log.WithField("foo", "bar"))
 
+	// adding additional log field
+	ctx = logctx.AddField(ctx, "bizz", "buzz")
+
 	// retrieving context log entry, adding some data and emitting the log
 	logctx.From(ctx).Info("hello world")
-	// Output: level=info msg="hello world" foo=bar
+	// Output: level=info msg="hello world" bizz=buzz foo=bar
 }
 
 // IMPORTANT: this test is a the end because it alters global Default,
